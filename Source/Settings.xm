@@ -51,7 +51,7 @@ static int appVersionSpoofer() {
 
 extern NSBundle *YTLitePlusBundle();
 
-// Add both YTLite and YTLitePlus to YouGroupSettings
+// Add both YTLite and YouTubePlus to YouGroupSettings
 static const NSInteger YTLitePlusSection = 788;
 static const NSInteger YTLiteSection = 789;
 %hook YTSettingsGroupData
@@ -69,7 +69,7 @@ static const NSInteger YTLiteSection = 789;
 %end
 
 
-// Add YTLitePlus to the settings list
+// Add YouTubePlus to the settings list
 %hook YTAppSettingsPresentationData
 + (NSArray *)settingsCategoryOrder {
     NSArray *order = %orig;
@@ -97,7 +97,7 @@ static const NSInteger YTLiteSection = 789;
     Class YTSettingsSectionItemClass = %c(YTSettingsSectionItem);
     YTSettingsViewController *settingsViewController = [self valueForKey:@"_settingsViewControllerDelegate"];
 
-    // Add item for going to the YTLitePlus GitHub page
+    // Add item for going to the YouTubePlus GitHub page
     YTSettingsSectionItem *main = [%c(YTSettingsSectionItem)
         itemWithTitle:[NSString stringWithFormat:LOC(@"VERSION"), @(OS_STRINGIFY(TWEAK_VERSION))]
         titleDescription:LOC(@"VERSION_CHECK")
@@ -117,7 +117,7 @@ static const NSInteger YTLiteSection = 789;
         selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
             if (IS_ENABLED(@"switchCopyandPasteFunctionality_enabled")) {
                 // Export Settings functionality
-                NSURL *tempFileURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"YTLitePlusSettings.txt"]];
+                NSURL *tempFileURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"YouTubePlusSettings.txt"]];
                 NSMutableString *settingsString = [NSMutableString string];
                 for (NSString *key in NSUserDefaultsCopyKeys) {
                     id value = [[NSUserDefaults standardUserDefaults] objectForKey:key];

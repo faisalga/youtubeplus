@@ -1286,7 +1286,7 @@ NSInteger pageStyle = 0;
     NSArray *allKeys = [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] allKeys];
     if (![allKeys containsObject:@"YTLPDidPerformFirstRunSetup"]) { 
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"YTLPDidPerformFirstRunSetup"];
-        // Set miscellaneous YTLitePlus features to enabled
+        // Set miscellaneous YouTubePlus features to enabled
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"RYD-ENABLED"]; 
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"YouPiPEnabled"]; 
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"newSettingsUI_enabled"]; 

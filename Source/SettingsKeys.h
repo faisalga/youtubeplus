@@ -1,9 +1,9 @@
 #import "../YTLitePlus.h"
 
-// Keys for "Copy Settings" button (for: YTLitePlus)
-// In alphabetical order for tweaks after YTLitePlus
+// Keys for "Copy Settings" button (for: YouTubePlus)
+// In alphabetical order for tweaks after YouTubePlus
 NSArray *NSUserDefaultsCopyKeys = @[
-    // YTLitePlus - gathered using get_keys.py
+    // YouTubePlus - gathered using get_keys.py
     @"YTTapToSeek_enabled", @"alwaysShowRemainingTime_enabled", @"bigYTMiniPlayer_enabled", @"castConfirm_enabled",
     @"disableAccountSection_enabled", @"disableAmbientModeFullscreen_enabled",
     @"disableAmbientModePortrait_enabled", @"disableAutoplaySection_enabled", @"disableCollapseButton_enabled",
