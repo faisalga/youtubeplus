@@ -24,7 +24,7 @@ AltStore will notify you when new versions are available.
 
 If you prefer a one-time install without adding the source:
 
-**[Install via AltStore](altstore://install?url=https://github.com/faisalga/YouTubePlus/releases/latest/download/YouTubePlus.ipa)**
+**[Install via AltStore](altstore://install?url=https://github.com/faisalga/YouTubePlus/releases/download/v21.06.2-5.2b4/YouTubePlus_21.06.2_5.2b4.ipa)**
 
 ### TrollStore
 
