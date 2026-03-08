@@ -104,7 +104,7 @@ static const NSInteger YTLiteSection = 789;
         accessibilityIdentifier:nil
         detailTextBlock:nil
         selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
-            return [%c(YTUIUtils) openURL:[NSURL URLWithString:@"https://github.com/YTLitePlus/YTLitePlus/releases/latest"]];
+            return [%c(YTUIUtils) openURL:[NSURL URLWithString:@"https://github.com/faisalga/YouTubePlus/releases/latest"]];
         }];
     [sectionItems addObject:main];
 
@@ -655,9 +655,9 @@ static const NSInteger YTLiteSection = 789;
     [sectionItems addObject:miscellaneousGroup];
 
     if ([settingsViewController respondsToSelector:@selector(setSectionItems:forCategory:title:icon:titleDescription:headerHidden:)])
-        [settingsViewController setSectionItems:sectionItems forCategory:YTLitePlusSection title:@"YTLitePlus" icon:nil titleDescription:LOC(@"TITLE DESCRIPTION") headerHidden:YES];
+        [settingsViewController setSectionItems:sectionItems forCategory:YTLitePlusSection title:@"YouTubePlus" icon:nil titleDescription:LOC(@"TITLE DESCRIPTION") headerHidden:YES];
     else
-        [settingsViewController setSectionItems:sectionItems forCategory:YTLitePlusSection title:@"YTLitePlus" titleDescription:LOC(@"TITLE DESCRIPTION") headerHidden:YES];}
+        [settingsViewController setSectionItems:sectionItems forCategory:YTLitePlusSection title:@"YouTubePlus" titleDescription:LOC(@"TITLE DESCRIPTION") headerHidden:YES];}
 
 - (void)updateSectionForCategory:(NSUInteger)category withEntry:(id)entry {
     if (category == YTLitePlusSection) {

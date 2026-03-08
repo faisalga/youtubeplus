@@ -1,21 +1,17 @@
-# ⚠️ Must Read ⚠️
-- The .ipa file is no longer shared on Github due to a [Google DMCA notice](https://www.reddit.com/r/jailbreak/comments/1b86tiz/balackburn_here_maintainer_of_ytliteplus_ive_just/) 
-- You need to build it yourself. See [Wiki-Building](https://github.com/Balackburn/YTLitePlus/wiki/Building)
+# YouTubePlus Release
 
-# YTLitePlus Release Information
+**YouTube:** `%youtube_version%`
+**YTLite:** `%ytliteplus_version%`
+**Compatibility:** iOS/iPadOS 14.0 or later
 
-Current YouTube IPA: `%youtube_version%`  
-Current YTLite Version: `%ytliteplus_version%`  
-Current App Compatibility: `iOS/iPadOS 15.0` or later
+## Install
 
-**RELEASE %youtube_version%-%ytliteplus_version%:** (%date%)
+**[Install via AltStore](altstore://install?url=https://github.com/faisalga/YouTubePlus/releases/download/v%youtube_version%-%ytliteplus_version%/YouTubePlus_%youtube_version%_%ytliteplus_version%.ipa)** · [Direct IPA Download](https://github.com/faisalga/YouTubePlus/releases/download/v%youtube_version%-%ytliteplus_version%/YouTubePlus_%youtube_version%_%ytliteplus_version%.ipa)
 
-- Updated Youtube from `%youtube_version%` to `%youtube_version%`
-- Updated YTLite from `%ytliteplus_version%` to `%ytliteplus_version%`
-  
-### Issues in this Release:
-- LowContrastMode does not work *(Compatible only with YouTube v17.33.2-v17.38.10)*
-- Hiding Shorts creates an empty space instead #55
+## Changes
 
-### Catbox
+- YouTube `%youtube_version%`
+- YTLite `%ytliteplus_version%`
+
+## Catbox Mirror
 `%catbox_url%`

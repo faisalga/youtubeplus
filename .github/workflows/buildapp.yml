@@ -1,7 +1,7 @@
 # Original idea by @ISnackable. Many thanks to him for handling the most hardest parts!
 # https://github.com/ISnackable/CercubePlus/blob/main/.github/workflows/Build.yml
 
-name: Build and Release YTLitePlus
+name: Build and Release YouTubePlus
 
 on:
   workflow_dispatch:
@@ -53,7 +53,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build YTLitePlus
+    name: Build YouTubePlus
     runs-on: macos-15-intel
     permissions:
       contents: write
@@ -181,7 +181,7 @@ jobs:
           # Build the package
           make package SIDELOAD=1 THEOS_PACKAGE_SCHEME=rootless FINALPACKAGE=1 YTLITE_VERSION=${{ env.YTLITE_VERSION }}
           # Rename the package based on the version
-          (mv "packages/$(ls -t packages | head -n1)" "packages/YTLitePlus_${{ env.YT_VERSION }}_${{ env.YTLITE_VERSION }}.ipa")
+          (mv "packages/$(ls -t packages | head -n1)" "packages/YouTubePlus_${{ env.YT_VERSION }}_${{ env.YTLITE_VERSION }}.ipa")
           # Pass package name to the upload step
           echo "package=$(ls -t packages | head -n1)" >> $GITHUB_OUTPUT
           # Print out the hash and bundle ID
@@ -196,7 +196,7 @@ jobs:
         if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v4.5.0
         with:
-          name: YTLitePlus_${{ env.YT_VERSION }}_${{ env.YTLITE_VERSION }}
+          name: YouTubePlus_${{ env.YT_VERSION }}_${{ env.YTLITE_VERSION }}
           path: packages/${{ steps.build_package.outputs.package }}
           if-no-files-found: error
           
@@ -226,7 +226,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ env.YT_VERSION }}-${{ env.YTLITE_VERSION }}
-          name: v${{ env.YT_VERSION }}-${{ env.YTLITE_VERSION }} - YTLitePlus
+          name: v${{ env.YT_VERSION }}-${{ env.YTLITE_VERSION }} - YouTubePlus
           files: packages/*.ipa
           draft: true
           body_path: release_notes.md
@@ -234,21 +234,23 @@ jobs:
       - name: Update Altstore Source with latest release
         if: ${{ inputs.catbox_upload }}
         run: |
-          curl --location --request POST 'https://api.github.com/repos/Balackburn/YTLitePlusAltstore/actions/workflows/update_source.yml/dispatches' \
-          --header 'Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}' \
-          --header 'Content-Type: application/json' \
-          --data-raw '{
-            "ref": "main",
-            "inputs": {
-              "yt_lite_plus_url": "${{ env.CATBOX_URL }}",
-              "yt_lite_plus_version": "${{ env.YTLITE_VERSION }}",
-              "yt_version": "${{ env.YT_VERSION }}"
-            }
-          }'
+          # Update AltStore source (configure PERSONAL_ACCESS_TOKEN and target repo as needed)
+          # curl --location --request POST 'https://api.github.com/repos/YOUR_USER/YouTubePlusAltstore/actions/workflows/update_source.yml/dispatches' \
+          # --header 'Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}' \
+          # --header 'Content-Type: application/json' \
+          # --data-raw '{
+          #   "ref": "main",
+          #   "inputs": {
+          #     "yt_plus_url": "${{ env.CATBOX_URL }}",
+          #     "yt_plus_version": "${{ env.YTLITE_VERSION }}",
+          #     "yt_version": "${{ env.YT_VERSION }}"
+          #   }
+          # }'
+          echo "AltStore source update skipped (configure target repo)"
 
       - name: Job Summary
         run: |
-          echo -e '### 📺 Build Complete' >> $GITHUB_STEP_SUMMARY
+          echo -e '### 📺 YouTubePlus Build Complete' >> $GITHUB_STEP_SUMMARY
 
       - name: Job Summary - Artifact Upload
         if: ${{ inputs.upload_artifact }}
