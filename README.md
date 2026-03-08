@@ -6,15 +6,25 @@ YouTubePlus bundles multiple jailbreak tweaks into a single injectable package t
 
 ## Install
 
-### AltStore (Recommended)
+### AltStore Source (Recommended)
+
+Add YouTubePlus as an AltStore source to get automatic update notifications:
 
 1. Install [AltStore](https://altstore.io/) on your device
-2. Tap the link below on your iOS device:
+2. Tap this link on your iOS device:
 
-   **[Install via AltStore](altstore://install?url=https://github.com/faisalga/YouTubePlus/releases/latest/download/YouTubePlus.ipa)**
+   **[Add YouTubePlus Source to AltStore](altstore://source?url=https://raw.githubusercontent.com/faisalga/YouTubePlus/main/altstore-source.json)**
 
-3. AltStore will download and install the IPA automatically
+3. In AltStore, go to **Browse → YouTubePlus** and tap **Install**
 4. Trust the certificate in **Settings → General → VPN & Device Management**
+
+AltStore will notify you when new versions are available.
+
+### AltStore Direct Install
+
+If you prefer a one-time install without adding the source:
+
+**[Install via AltStore](altstore://install?url=https://github.com/faisalga/YouTubePlus/releases/latest/download/YouTubePlus.ipa)**
 
 ### TrollStore
 
@@ -31,7 +41,7 @@ YouTubePlus bundles multiple jailbreak tweaks into a single injectable package t
    - [AltDeploy](https://github.com/pixelomer/AltDeploy) (macOS)
 3. Trust the certificate in **Settings → General → VPN & Device Management**
 
-> **Note:** Free Apple Developer accounts require re-signing every 7 days. AltStore can handle this automatically.
+> **Note:** Free Apple Developer accounts require re-signing every 7 days. AltStore handles this automatically when using the source or direct install methods.
 
 ## Features
 
