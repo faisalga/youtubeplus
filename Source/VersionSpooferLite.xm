@@ -6,18 +6,19 @@ typedef struct {
 } VersionMapping;
 
 static VersionMapping versionMappings[] = {
-    {0, @"19.49.7"}, // Last v19 App Version
-    {1, @"19.28.1"}, // New 2024 Thin Outline Icons
-    {2, @"19.26.5"}, // Restore 2020's Thin Outline Icons
-    {3, @"18.49.3"}, // Last v18 App Version
-    {4, @"18.35.4"}, // Oldest Supported App Version (v18) - this is a replacement of v17.33.2.
-    {5, @"18.34.5"}, // Brings back Library Tab - Deprecated/Unsupported
-    {6, @"18.33.3"}, // Removes Playables in Explore - Deprecated/Unsupported
-    {7, @"18.18.2"}, // Fixes YTClassicVideoQuality + YTSpeed - Deprecated/Unsupported
-    {8, @"18.01.2"}, // First v18 App Version - Deprecated/Unsupported
-    {9, @"17.49.6"}, // Last v17 App Version - Deprecated/Unsupported
-    {10, @"17.38.10"}, // Fixes LowContrastMode + No Rounded Thumbnails - Deprecated/Unsupported
-    {11, @"17.33.2"} // Oldest Supported App Version (v17) - Deprecated/Unsupported
+    {0, @"20.08.6"}, // Current Supported Version (v20)
+    {1, @"19.49.7"}, // Last v19 App Version - Deprecated (forced update)
+    {2, @"19.28.1"}, // New 2024 Thin Outline Icons - Deprecated
+    {3, @"19.26.5"}, // Restore 2020's Thin Outline Icons - Deprecated
+    {4, @"18.49.3"}, // Last v18 App Version - Deprecated
+    {5, @"18.35.4"}, // Oldest Supported App Version (v18) - Deprecated
+    {6, @"18.34.5"}, // Brings back Library Tab - Deprecated
+    {7, @"18.33.3"}, // Removes Playables in Explore - Deprecated
+    {8, @"18.18.2"}, // Fixes YTClassicVideoQuality + YTSpeed - Deprecated
+    {9, @"18.01.2"}, // First v18 App Version - Deprecated
+    {10, @"17.49.6"}, // Last v17 App Version - Deprecated
+    {11, @"17.38.10"}, // Fixes LowContrastMode + No Rounded Thumbnails - Deprecated
+    {12, @"17.33.2"} // Oldest Supported App Version (v17) - Deprecated
 };
 
 static int appVersionSpoofer() {

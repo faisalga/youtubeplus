@@ -263,20 +263,11 @@ BOOL isTabSelected = NO;
 
 // YTNoModernUI - @arichornlover
 %group gYTNoModernUI
-%hook YTVersionUtils // YTNoModernUI Original Version
-+ (NSString *)appVersion { return @"17.38.10"; }
-%end
-
-%hook YTSettingsCell // Remove v17.38.10 Version Number - @Dayanch96
-- (void)setDetailText:(id)arg1 {
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *appVersion = infoDictionary[@"CFBundleShortVersionString"];
-
-    if ([arg1 isEqualToString:@"17.38.10"]) {
-        arg1 = appVersion;
-    } %orig(arg1);
-}
-%end
+// YTVersionUtils hook removed - spoofing to v17.38.10 triggers YouTube's
+// forced update screen. Version spoofing is now handled exclusively by
+// VersionSpooferLite.xm which defaults to a supported v20+ version.
+// The other YTNoModernUI hooks (red progress bar, no rounded buttons, etc.)
+// work independently without needing a version spoof.
 
 %hook YTInlinePlayerBarContainerView // Red Progress Bar - YTNoModernUI
 - (id)quietProgressBarColor {

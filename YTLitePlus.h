@@ -53,7 +53,7 @@
 #define LOC(x) [tweakBundle localizedStringForKey:x value:nil table:nil]
 #define YT_BUNDLE_ID @"com.google.ios.youtube"
 #define YT_NAME @"YouTube"
-#define LOWCONTRASTMODE_CUTOFF_VERSION @"17.38.10"
+#define LOWCONTRASTMODE_CUTOFF_VERSION @"20.08.6"
 #define IS_ENABLED(k) [[NSUserDefaults standardUserDefaults] boolForKey:k]
 #define APP_THEME_IDX [[NSUserDefaults standardUserDefaults] integerForKey:@"appTheme"]
 
