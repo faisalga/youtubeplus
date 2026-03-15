@@ -32,7 +32,22 @@
         }
       ],
       "appPermissions": {
-        "entitlements": [],
+        "entitlements": [
+          {"name": "com.apple.security.application-groups"},
+          {"name": "com.apple.developer.associated-domains"},
+          {"name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"},
+          {"name": "com.apple.developer.storekit.request-data"},
+          {"name": "com.apple.developer.usernotifications.communication"},
+          {"name": "com.apple.developer.usernotifications.time-sensitive"},
+          {"name": "get-task-allow"},
+          {"name": "com.apple.developer.device-information.user-assigned-device-name"},
+          {"name": "com.apple.developer.group-session"},
+          {"name": "keychain-access-groups"},
+          {"name": "com.apple.developer.networking.multicast"},
+          {"name": "aps-environment"},
+          {"name": "com.apple.developer.siri"},
+          {"name": "com.apple.developer.networking.wifi-info"}
+        ],
         "privacy": {
           "NSCameraUsageDescription": "Upload videos and profile pictures",
           "NSMicrophoneUsageDescription": "Record and upload videos",
