@@ -39,7 +39,6 @@
           "com.apple.developer.storekit.request-data",
           "com.apple.developer.usernotifications.communication",
           "com.apple.developer.usernotifications.time-sensitive",
-          "get-task-allow",
           "com.apple.developer.device-information.user-assigned-device-name",
           "com.apple.developer.group-session",
           "keychain-access-groups",
