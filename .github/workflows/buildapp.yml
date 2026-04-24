@@ -28,7 +28,7 @@ on:
         type: string
       spoof_version:
         description: "Spoofed YouTube version written to Info.plist (bypasses force-update gate). Bump if YouTube raises its server-side minimum."
-        default: "20.14.43"
+        default: "21.16.2"
         required: true
         type: string
       commit_id:
