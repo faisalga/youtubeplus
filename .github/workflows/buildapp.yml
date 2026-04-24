@@ -26,6 +26,11 @@ on:
         default: "YouTube"
         required: true
         type: string
+      spoof_version:
+        description: "Spoofed YouTube version written to Info.plist (bypasses force-update gate). Bump if YouTube raises its server-side minimum."
+        default: "20.14.43"
+        required: true
+        type: string
       commit_id:
         description: "(Optional) Commit ID to build at"
         default: ""
@@ -146,21 +151,21 @@ jobs:
           # Remove contents in the iPA that interfere with sideloading
           rm -rf tmp/Payload/YouTube.app/_CodeSignature/CodeResources
           rm -rf tmp/Payload/YouTube.app/PlugIns/*
-          # Modify Info.plist to remove UISupportedDevices (Python script)
+          # Modify Info.plist: remove UISupportedDevices + spoof CFBundle*Version to bypass YouTube's force-update gate
           python - <<EOF
           import plistlib
-          def remove_uisupporteddevices(filepath):
+          spoof = "${{ inputs.spoof_version }}"
+
+          def patch_plist(filepath):
               with open(filepath, 'rb') as f:
                   plist = plistlib.load(f)
-
-              if 'UISupportedDevices' in plist:
-                  del plist['UISupportedDevices']
-
+              plist.pop('UISupportedDevices', None)
+              plist['CFBundleShortVersionString'] = spoof
+              plist['CFBundleVersion'] = spoof
               with open(filepath, 'wb') as f:
                   plistlib.dump(plist, f)
 
-          filepath = 'tmp/Payload/YouTube.app/Info.plist'
-          remove_uisupporteddevices(filepath)
+          patch_plist('tmp/Payload/YouTube.app/Info.plist')
           EOF
           # Manually install the Open in YouTube extension
           cp -R Extensions/*.appex tmp/Payload/YouTube.app/PlugIns
