@@ -23,11 +23,11 @@
       "screenshots": [],
       "versions": [
         {
-          "version": "20.14.43",
-          "date": "2026-04-24T00:00:00-04:00",
-          "localizedDescription": "YouTubePlus v21.06.2-5.2.1 — YouTube force-update bypass.\n\n• Info.plist CFBundleVersion spoofed to 20.14.43 (bypasses YouTube's v20+ server-side force-update gate)\n• YTLite 5.2.1\n• Latest entitlement fixes for free Apple Developer account sideloading\n• Based on YouTube 21.06.2 base IPA\n\nIf YouTube raises its minimum version again in future, the spoof can be bumped via the workflow input.",
+          "version": "21.08.3",
+          "date": "2026-04-24T22:00:00-04:00",
+          "localizedDescription": "YouTubePlus v21.06.2-5.2.1 — bumped force-update spoof to 21.08.3.\n\n• Spoof bumped from 20.14.43 → 21.08.3 (Google sunsetted the older value server-side; community-confirmed value per arichornlover/uYouEnhanced spoofer table, last updated 2026-02-24)\n• YTLite 5.2.1\n• Latest entitlement fixes for free Apple Developer account sideloading\n• Based on YouTube 21.06.2 base IPA",
           "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/v21.06.2-5.2.1/YouTubePlus_21.06.2_5.2.1.ipa",
-          "size": 130384227,
+          "size": 130384234,
           "minOSVersion": "14.0"
         }
       ],
