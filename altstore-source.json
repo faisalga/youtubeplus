@@ -23,11 +23,11 @@
       "screenshots": [],
       "versions": [
         {
-          "version": "21.08.3",
-          "date": "2026-04-24T22:00:00-04:00",
-          "localizedDescription": "YouTubePlus v21.06.2-5.2.1 — bumped force-update spoof to 21.08.3.\n\n• Spoof bumped from 20.14.43 → 21.08.3 (Google sunsetted the older value server-side; community-confirmed value per arichornlover/uYouEnhanced spoofer table, last updated 2026-02-24)\n• YTLite 5.2.1\n• Latest entitlement fixes for free Apple Developer account sideloading\n• Based on YouTube 21.06.2 base IPA",
-          "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/v21.06.2-5.2.1/YouTubePlus_21.06.2_5.2.1.ipa",
-          "size": 130384234,
+          "version": "21.17.3",
+          "date": "2026-04-28T16:30:00-04:00",
+          "localizedDescription": "YouTubePlus v21.17.3-5.2.1 — fresh YouTube 21.17.3 base.\n\n• Rebuilt on a current YouTube 21.17.3 IPA (decrypted from App Store, dated 2026-04-23) instead of the months-old 21.06.2 base. Server-side force-update gate is now satisfied by the binary's actual client version, not just Info.plist spoof.\n• Spoof_version=21.17.3 matches binary; AltStore source version matches both.\n• YTLite 5.2.1; latest entitlement fixes for free Apple Developer account sideloading.\n\nIf launches fail again in future, root cause is most likely YouTube shipping a newer minimum and our base IPA aging out — solved by uploading a fresher decrypted IPA and rebuilding.",
+          "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/v21.17.3-5.2.1/YouTubePlus_21.17.3_5.2.1.ipa",
+          "size": 138059994,
           "minOSVersion": "14.0"
         }
       ],
