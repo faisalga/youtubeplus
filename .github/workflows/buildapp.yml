@@ -151,6 +151,14 @@ jobs:
           # Remove contents in the iPA that interfere with sideloading
           rm -rf tmp/Payload/YouTube.app/_CodeSignature/CodeResources
           rm -rf tmp/Payload/YouTube.app/PlugIns/*
+          # iOS 17+ added a separate Extensions/ dir alongside legacy PlugIns/.
+          # Stock entries (e.g. AppMigrationExtension) keep their original
+          # com.google.ios.youtube.* bundle ID, which violates the parent-prefix
+          # rule once AltStore rewrites the parent to com.google.ios.youtube.<TEAMID>.
+          rm -rf tmp/Payload/YouTube.app/Extensions
+          # SC_Info contains FairPlay manifests that reference removed extensions
+          # and confuses re-signing.
+          rm -rf tmp/Payload/YouTube.app/SC_Info
           # Modify Info.plist: remove UISupportedDevices + spoof CFBundle*Version to bypass YouTube's force-update gate
           python - <<EOF
           import plistlib
