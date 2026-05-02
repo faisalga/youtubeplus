@@ -36,16 +36,18 @@
           "com.apple.security.application-groups",
           "com.apple.developer.associated-domains",
           "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
-
-          "com.apple.developer.usernotifications.time-sensitive",
-          "get-task-allow",
+          "com.apple.developer.declared-age-range",
           "com.apple.developer.device-information.user-assigned-device-name",
           "com.apple.developer.group-session",
-          "keychain-access-groups",
           "com.apple.developer.networking.multicast",
-          "aps-environment",
+          "com.apple.developer.networking.wifi-info",
           "com.apple.developer.siri",
-          "com.apple.developer.networking.wifi-info"
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "aps-environment",
+          "get-task-allow",
+          "keychain-access-groups"
         ],
         "privacy": {
           "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
