@@ -61,9 +61,71 @@
           "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites."
         }
       }
+    },
+    {
+      "name": "YTBetterPlus",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "DeltAndy123 (mirrored)",
+      "subtitle": "Alternative build by DeltAndy123 — bundles YTLite 5.2b4 + extra tweaks",
+      "localizedDescription": "Alternative comparison build, mirrored from DeltAndy123/YTBetterPlus for side-by-side testing against YouTubePlus. Built upstream with pyzule-rw (cleaner than Theos), uses the last free YTLite (5.2b4) plus a richer tweak bundle.\n\nBundled tweaks:\n• YouTube Plus (YTLite 5.2b4 — ad blocking, downloads, SponsorBlock, UI customization)\n• Return YouTube Dislikes\n• YTUHD (1440p / 4K)\n• YTweaks (misc QoL)\n• YouChooseQuality (auto quality based on Wi-Fi/cellular/AirPlay/low-power)\n• DontEatMyContent (Dynamic Island fix for 2:1 video)\n• YTABConfig (manual A/B feature toggles)\n• YTHoldForSpeed (hold-to-toggle speed)\n• YouGroupSettings (cleaner settings UI)\n• YTVideoOverlay (overlay buttons): YouPiP, YouLoop, YouMute, YouQuality, YouSpeed, YouTimeStamp\n• YoutubeExtensions (share-sheet + Safari extension)\n\nSource: https://github.com/DeltAndy123/YTBetterPlus\n\nNote: shares com.google.ios.youtube under the hood — install one or the other, not both, on the same device.",
+      "iconURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-128.png",
+      "tintColor": "1E90FF",
+      "category": "entertainment",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "21.16.2",
+          "date": "2026-04-23T18:18:00-04:00",
+          "localizedDescription": "YTBetterPlus v21.16.2-5.2b4 (DeltAndy123 prebuilt mirror).\n\n• YouTube 21.16.2 base (decrypted by und3fined)\n• YTLite 5.2b4 (last free YTLite)\n• 13 bundled tweaks per upstream README\n• Built with pyzule-rw / cyan, not Theos\n\nDirect download from upstream release; not rebuilt locally.",
+          "downloadURL": "https://github.com/DeltAndy123/YTBetterPlus/releases/download/v21.16.2-5.2b4/YTBetterPlus_21.16.2-5.2b4.ipa",
+          "size": 132505895,
+          "minOSVersion": "14.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.declared-age-range",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.group-session",
+          "com.apple.developer.networking.multicast",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.siri",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "aps-environment",
+          "get-task-allow",
+          "keychain-access-groups"
+        ],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSLocationWhenInUseUsageDescription": "This enables local content discovery, improved recommendations, and enhanced search results.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites."
+        }
+      }
     }
   ],
   "news": [
+    {
+      "title": "YTBetterPlus added for side-by-side comparison",
+      "identifier": "ytbetterplus-mirror-21.16.2",
+      "caption": "Mirroring DeltAndy123/YTBetterPlus 21.16.2 (YTLite 5.2b4 + 12 extra tweaks) as a comparison build.",
+      "tintColor": "1E90FF",
+      "imageURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-1024.png",
+      "date": "2026-05-06T00:00:00-04:00",
+      "notify": true,
+      "url": "https://github.com/DeltAndy123/YTBetterPlus/releases/tag/v21.16.2-5.2b4",
+      "appID": "com.google.ios.youtube"
+    },
     {
       "title": "YouTubePlus v21.06.2-5.2 Released",
       "identifier": "release-21.06.2-5.2",
