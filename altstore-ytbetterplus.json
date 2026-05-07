@@ -24,10 +24,10 @@
       "versions": [
         {
           "version": "21.16.2",
-          "date": "2026-04-23T18:18:00-04:00",
-          "localizedDescription": "YTBetterPlus v21.16.2-5.2b4 (DeltAndy123 prebuilt).\n\n• YouTube 21.16.2 base (decrypted by und3fined)\n• YTLite 5.2b4 (last free YTLite)\n• 13 bundled tweaks per upstream README\n• Built with pyzule-rw / cyan, not Theos\n• No Extensions/AppMigrationExtension issue (verified)\n\nDirect download from upstream release; not rebuilt locally.",
-          "downloadURL": "https://github.com/DeltAndy123/YTBetterPlus/releases/download/v21.16.2-5.2b4/YTBetterPlus_21.16.2-5.2b4.ipa",
-          "size": 132505895,
+          "date": "2026-05-06T22:00:00-04:00",
+          "localizedDescription": "YTBetterPlus v21.16.2-5.2b4 (DeltAndy123 prebuilt, post-strip mirror).\n\n• YouTube 21.16.2 base (decrypted by und3fined)\n• YTLite 5.2b4 (last free YTLite)\n• 13 bundled tweaks per upstream README\n• Built upstream with pyzule-rw / cyan, not Theos\n• Stripped Payload/YouTube.app/Extensions/AppMigrationExtension to fix iOS 17+ install error \"Failed to set app extension placeholders... mismatched bundle IDs\"\n\nUpstream IPA shipped with the AppMigrationExtension placeholder; AltStore re-signing rewrites parent bundle ID but not extensions, causing iOS Installer to reject. Mirror has the offending extension removed.",
+          "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/internal-ytbp-mirror-21.16.2/YTBetterPlus_21.16.2-5.2b4_stripped.ipa",
+          "size": 126923257,
           "minOSVersion": "14.0"
         }
       ],
