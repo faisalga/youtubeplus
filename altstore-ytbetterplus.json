@@ -23,11 +23,11 @@
       "screenshots": [],
       "versions": [
         {
-          "version": "21.16.2",
-          "date": "2026-05-06T22:30:00-04:00",
-          "localizedDescription": "YTBetterPlus v21.16.2-5.2b4 (DeltAndy123 prebuilt, minimal mirror).\n\n• YouTube 21.16.2 base (decrypted by und3fined)\n• YTLite 5.2b4 (last free YTLite)\n• ~13 bundled tweaks per upstream README\n• Built upstream with pyzule-rw / cyan\n\nMinimal mirror — ALL .appex extensions stripped from the upstream IPA (Extensions/AppMigrationExtension, PlugIns/OpenYoutubeSafariExtension, PlugIns/ShareServiceExtension) along with SC_Info/ and _CodeSignature/. Upstream IPA tripped iOS 17+ Installer's parent-prefix check on the renamed bundle ID. None of the extensions provide core YouTube features — the share-sheet integration is the only loss, in exchange for the install actually completing.",
-          "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/internal-ytbp-mirror-21.16.2/YTBetterPlus_21.16.2-5.2b4_minimal.ipa",
-          "size": 126555650,
+          "version": "21.13.6",
+          "date": "2026-05-06T23:00:00-04:00",
+          "localizedDescription": "YTBetterPlus v21.13.6-5.2b4 (DeltAndy123 prebuilt, minimal mirror).\n\n• YouTube 21.13.6 base — the highest YouTube version compatible with free YTLite 5.2b4 per upstream issue #1; newer YouTube versions (21.14+) crash on launch with this dylib\n• YTLite 5.2b4 (last free YTLite)\n• ~13 bundled tweaks per upstream README\n• Built upstream with pyzule-rw / cyan\n\nMinimal mirror — ALL .appex extensions stripped from the upstream IPA (Extensions/AppMigrationExtension, PlugIns/OpenYoutubeSafariExtension, PlugIns/ShareServiceExtension) along with SC_Info/ and _CodeSignature/. Upstream IPA tripped iOS 17+ Installer's parent-prefix check on the renamed bundle ID after AltStore re-signing.",
+          "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/internal-ytbp-mirror-21.13.6/YTBetterPlus_21.13.6-5.2b4_minimal.ipa",
+          "size": 126044654,
           "minOSVersion": "14.0"
         }
       ],
