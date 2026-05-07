@@ -24,8 +24,8 @@
       "versions": [
         {
           "version": "21.17.3",
-          "date": "2026-04-28T16:30:00-04:00",
-          "localizedDescription": "YouTubePlus v21.17.3-5.2.1 — fresh YouTube 21.17.3 base.\n\n• Rebuilt on a current YouTube 21.17.3 IPA (decrypted from App Store, dated 2026-04-23) instead of the months-old 21.06.2 base. Server-side force-update gate is now satisfied by the binary's actual client version, not just Info.plist spoof.\n• Spoof_version=21.17.3 matches binary; AltStore source version matches both.\n• YTLite 5.2.1; latest entitlement fixes for free Apple Developer account sideloading.\n\nIf launches fail again in future, root cause is most likely YouTube shipping a newer minimum and our base IPA aging out — solved by uploading a fresher decrypted IPA and rebuilding.",
+          "date": "2026-05-06T22:30:00-04:00",
+          "localizedDescription": "YouTubePlus v21.17.3-5.2.1 — YouTube 21.17.3 base, post-strip.\n\n• Built on YouTube 21.17.3 (decrypted from App Store, 2026-04-23)\n• Spoof_version=21.17.3 matches binary; source version matches both\n• YTLite 5.2.1\n• iOS 17+ Payload/YouTube.app/Extensions/AppMigrationExtension.appex stripped to fix AltStore re-signing error \"mismatched bundle IDs\" on iOS 26\n• Latest entitlement fixes for sideloading\n\nIPA verified clean of the AppMigrationExtension placeholder before publish. If launches fail in future, most likely cause is YouTube shipping a newer minimum — refresh by rebuilding on a fresher decrypted IPA.",
           "downloadURL": "https://github.com/faisalga/YouTubePlus/releases/download/v21.17.3-5.2.1/YouTubePlus_21.17.3_5.2.1.ipa",
           "size": 133377538,
           "minOSVersion": "14.0"
