@@ -1,0 +1,83 @@
+{
+  "name": "YTLite (paywall-free fork)",
+  "identifier": "com.faisalga.YTLite.AltStore",
+  "subtitle": "YTLite 5.2.1 built from public source — no subscription gate",
+  "description": "Build of dayanch96/YTLite v5.2.1 from public source code on the faisalga/YTLite fork's custom branch. The verifyAccessWithCompletion: paywall logic exists only in the upstream's pre-built .deb (private branch), not in the public source — so a clean source-build yields a fully unlocked YTLite. Updated nightly via auto-sync from upstream. Add this source for the latest source-built YTLite IPA.",
+  "iconURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-128.png",
+  "headerURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-1024.png",
+  "website": "https://github.com/faisalga/YTLite",
+  "tintColor": "00C853",
+  "featuredApps": [
+    "com.google.ios.youtube"
+  ],
+  "apps": [
+    {
+      "name": "YTLite (fork)",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "faisalga (fork of dayanch96/YTLite)",
+      "subtitle": "Paywall-free YTLite 5.2.1 + 6 integrations",
+      "localizedDescription": "Source-built YTLite from faisalga/YTLite custom branch. Identical to the official YTLite 5.2.1 minus the verifyAccessWithCompletion: subscription gate (which exists only in the upstream's pre-built binary, not in the public .x source files).\n\nBundled integrations:\n• YouPiP (Picture-in-Picture)\n• YTUHD (1440p / 4K unlock)\n• YouQuality (overlay quality control)\n• Return YouTube Dislikes\n• YTABConfig (A/B feature flags)\n• DontEatMyContent (Dynamic Island fix)\n• YTVideoOverlay + YouGroupSettings (helpers)\n• Open in YouTube Safari extension was stripped to ensure clean AltStore install (no .appex bundle ID prefix mismatch with re-signed parent).\n\nAlternative to YTBetterPlus — uses YouTube 21.17.3 base (vs YTBetterPlus's 21.13.6) and the latest YTLite source (5.2.1, source-built) rather than the older free 5.2b4 .deb.\n\nShares com.google.ios.youtube bundle ID with YouTubePlus and YTBetterPlus — only one can be installed at a time on the device.",
+      "iconURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-128.png",
+      "tintColor": "00C853",
+      "category": "entertainment",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "21.17.3",
+          "date": "2026-05-22T00:00:00-04:00",
+          "localizedDescription": "First source-built release.\n\n• YouTube 21.17.3 base (decrypted)\n• YTLite 5.2.1 built from public source on faisalga/YTLite (paywall logic not present in source)\n• Integrations: YouPiP, YTUHD, YouQuality, Return YouTube Dislikes, YTABConfig, DontEatMyContent\n• PlugIns/ stripped (no AltStore re-signing prefix mismatch)\n• Build: faisalga/YTLite Actions run #6 (ytp-6)\n\nUpstream sync (faisalga/YTLite main branch) runs daily at 08:00 UTC; user can build fresh IPAs against newest upstream commits via the build.yml workflow on the YTLite fork.",
+          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-6/YouTubePlus_5.2.1-custom_minimal.ipa",
+          "size": 119482296,
+          "minOSVersion": "14.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.declared-age-range",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.group-session",
+          "com.apple.developer.networking.multicast",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.siri",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "aps-environment",
+          "get-task-allow",
+          "keychain-access-groups"
+        ],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSLocationWhenInUseUsageDescription": "This enables local content discovery, improved recommendations, and enhanced search results.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites."
+        }
+      }
+    }
+  ],
+  "news": [
+    {
+      "title": "First paywall-free YTLite source-build shipped",
+      "identifier": "ytlite-fork-first-build",
+      "caption": "Built YTLite 5.2.1 from public source on the faisalga/YTLite fork — same code as upstream's pre-built .deb minus the verifyAccessWithCompletion: subscription gate (which lives only in the private build, not in public source).",
+      "tintColor": "00C853",
+      "imageURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-1024.png",
+      "date": "2026-05-22T00:00:00-04:00",
+      "notify": true,
+      "url": "https://github.com/faisalga/YTLite/releases/tag/ytp-6",
+      "appID": "com.google.ios.youtube"
+    }
+  ],
+  "userInfo": {
+    "patreonAccessToken": ""
+  },
+  "sourceURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/altstore-ytlite.json"
+}
