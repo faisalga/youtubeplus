@@ -1,8 +1,8 @@
 {
-  "name": "YTLite (paywall-free fork) — DEPRECATED",
+  "name": "YTLite + YTLBypass (Option 3)",
   "identifier": "com.faisalga.YTLite.AltStore",
-  "subtitle": "DEPRECATED — public YTLite source is incomplete; use YTBetterPlus instead",
-  "description": "DO NOT INSTALL. This source is preserved for reference only. The build approach (compiling dayanch96/YTLite from public source) does NOT produce a feature-complete YTLite — the public source on GitHub is ~1% of the actual codebase (~117 symbols vs the paid binary's 55,000), so the resulting IPA is missing the entire settings UI, downloads, tab customization, and most features. Use the YTBetterPlus source (altstore-ytbetterplus.json) instead — it ships the full free 5.2b4 .deb which has the complete feature set.",
+  "subtitle": "Paid YTLite 5.2.1 + sibling tweak that defangs the runtime paywall",
+  "description": "Full feature-complete YTLite 5.2.1 (paid binary, all 55k symbols + all settings + downloads + tab customization) injected alongside YTLBypass.dylib — a small sibling tweak that hooks DVNCell.setValidationHandler:/setAccessoryIcon:/setErrorText:/validationHandler and DVNTableViewController.accessoryImage: to nil out the gating UX. Cells with no validator default to accessible, so settings toggles persist normally. Built on YouTube 21.17.3.\n\nIf settings still appear locked, the dev added a check the bypass doesn't cover yet — iterate from there.",
   "iconURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-128.png",
   "headerURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-1024.png",
   "website": "https://github.com/faisalga/YTLite",
@@ -12,10 +12,10 @@
   ],
   "apps": [
     {
-      "name": "YTLite fork (DEPRECATED — incomplete)",
+      "name": "YTLite + YTLBypass",
       "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "faisalga (fork of dayanch96/YTLite)",
-      "subtitle": "DEPRECATED — use YTBetterPlus source instead",
+      "developerName": "faisalga (paid YTLite + bypass tweak)",
+      "subtitle": "Full YTLite 5.2.1 with runtime paywall disabled via sibling tweak",
       "localizedDescription": "Source-built YTLite from faisalga/YTLite custom branch. Identical to the official YTLite 5.2.1 minus the verifyAccessWithCompletion: subscription gate (which exists only in the upstream's pre-built binary, not in the public .x source files).\n\nBundled integrations:\n• YouPiP (Picture-in-Picture)\n• YTUHD (1440p / 4K unlock)\n• YouQuality (overlay quality control)\n• Return YouTube Dislikes\n• YTABConfig (A/B feature flags)\n• DontEatMyContent (Dynamic Island fix)\n• YTVideoOverlay + YouGroupSettings (helpers)\n• Open in YouTube Safari extension was stripped to ensure clean AltStore install (no .appex bundle ID prefix mismatch with re-signed parent).\n\nAlternative to YTBetterPlus — uses YouTube 21.17.3 base (vs YTBetterPlus's 21.13.6) and the latest YTLite source (5.2.1, source-built) rather than the older free 5.2b4 .deb.\n\nShares com.google.ios.youtube bundle ID with YouTubePlus and YTBetterPlus — only one can be installed at a time on the device.",
       "iconURL": "https://raw.githubusercontent.com/faisalga/YouTubePlus/main/lang/YTLitePlus.bundle/YTLitePlusColored-128.png",
       "tintColor": "00C853",
@@ -24,10 +24,10 @@
       "versions": [
         {
           "version": "21.17.3",
-          "date": "2026-05-22T20:30:00-04:00",
-          "localizedDescription": "Source-built YTLite — now with bundle resources.\n\n• YouTube 21.17.3 base (decrypted)\n• YTLite 5.2.1 built from public source on faisalga/YTLite (paywall logic not present in source)\n• Integrations: YouPiP, YTUHD, YouQuality, Return YouTube Dislikes, YTABConfig, DontEatMyContent\n• YTLite.bundle injected (Assets.car + 13 Localizable.strings + SponsorAudio.m4a) — settings UI now renders proper labels and tab/navigation customization works\n• PlugIns/ stripped (no AltStore re-signing prefix mismatch)\n• Build: faisalga/YTLite Actions run #7 (ytp-7)\n\nFix vs prior build: the previous (ytp-6) IPA was missing YTLite.bundle/ — cyan extracts the .dylib from the source-built .deb but doesn't carry bundle resources through. The workflow now extracts YTLite.bundle from the .deb explicitly and passes it as a separate artifact to cyan.",
-          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-7/YouTubePlus_5.2.1-custom_minimal.ipa",
-          "size": 119482291,
+          "date": "2026-05-22T22:10:00-04:00",
+          "localizedDescription": "Option 3: paid YTLite + paywall bypass.\n\n• YouTube 21.17.3 base (decrypted)\n• YTLite 5.2.1 paid .deb injected (full feature set: 55k symbols, settings UI, downloads, tab customization, SponsorBlock, etc.)\n• YTLBypass.dylib injected alongside — hooks DVNCell.setValidationHandler:/setAccessoryIcon:/setErrorText:/validationHandler and DVNTableViewController.accessoryImage: to nil out the runtime paywall gating UX\n• YTLite.bundle injected (localizations + icons + audio)\n• 6 integration tweaks built from source: YouPiP, YTUHD, YouQuality, Return YouTube Dislikes, YTABConfig, DontEatMyContent\n• PlugIns/ stripped for clean AltStore re-signing\n• Build: faisalga/YTLite Actions run #9 (ytp-9)\n\nFirst attempt at the runtime paywall bypass. If settings UI still shows the lock UX or refuses toggles, the dev added a check we didn't cover yet — iterate on the bypass tweak source at bypass/Tweak.x.",
+          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-9/YouTubePlus_5.2.1_bypass_minimal.ipa",
+          "size": 128627599,
           "minOSVersion": "14.0"
         }
       ],
