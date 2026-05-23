@@ -24,10 +24,10 @@
       "versions": [
         {
           "version": "21.17.3",
-          "date": "2026-05-22T00:00:00-04:00",
-          "localizedDescription": "First source-built release.\n\n• YouTube 21.17.3 base (decrypted)\n• YTLite 5.2.1 built from public source on faisalga/YTLite (paywall logic not present in source)\n• Integrations: YouPiP, YTUHD, YouQuality, Return YouTube Dislikes, YTABConfig, DontEatMyContent\n• PlugIns/ stripped (no AltStore re-signing prefix mismatch)\n• Build: faisalga/YTLite Actions run #6 (ytp-6)\n\nUpstream sync (faisalga/YTLite main branch) runs daily at 08:00 UTC; user can build fresh IPAs against newest upstream commits via the build.yml workflow on the YTLite fork.",
-          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-6/YouTubePlus_5.2.1-custom_minimal.ipa",
-          "size": 119482296,
+          "date": "2026-05-22T20:30:00-04:00",
+          "localizedDescription": "Source-built YTLite — now with bundle resources.\n\n• YouTube 21.17.3 base (decrypted)\n• YTLite 5.2.1 built from public source on faisalga/YTLite (paywall logic not present in source)\n• Integrations: YouPiP, YTUHD, YouQuality, Return YouTube Dislikes, YTABConfig, DontEatMyContent\n• YTLite.bundle injected (Assets.car + 13 Localizable.strings + SponsorAudio.m4a) — settings UI now renders proper labels and tab/navigation customization works\n• PlugIns/ stripped (no AltStore re-signing prefix mismatch)\n• Build: faisalga/YTLite Actions run #7 (ytp-7)\n\nFix vs prior build: the previous (ytp-6) IPA was missing YTLite.bundle/ — cyan extracts the .dylib from the source-built .deb but doesn't carry bundle resources through. The workflow now extracts YTLite.bundle from the .deb explicitly and passes it as a separate artifact to cyan.",
+          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-7/YouTubePlus_5.2.1-custom_minimal.ipa",
+          "size": 119482291,
           "minOSVersion": "14.0"
         }
       ],
