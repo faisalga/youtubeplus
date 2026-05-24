@@ -24,10 +24,10 @@
       "versions": [
         {
           "version": "21.17.3",
-          "date": "2026-05-22T22:10:00-04:00",
-          "localizedDescription": "Option 3: paid YTLite + paywall bypass.\n\n• YouTube 21.17.3 base (decrypted)\n• YTLite 5.2.1 paid .deb injected (full feature set: 55k symbols, settings UI, downloads, tab customization, SponsorBlock, etc.)\n• YTLBypass.dylib injected alongside — hooks DVNCell.setValidationHandler:/setAccessoryIcon:/setErrorText:/validationHandler and DVNTableViewController.accessoryImage: to nil out the runtime paywall gating UX\n• YTLite.bundle injected (localizations + icons + audio)\n• 6 integration tweaks built from source: YouPiP, YTUHD, YouQuality, Return YouTube Dislikes, YTABConfig, DontEatMyContent\n• PlugIns/ stripped for clean AltStore re-signing\n• Build: faisalga/YTLite Actions run #9 (ytp-9)\n\nFirst attempt at the runtime paywall bypass. If settings UI still shows the lock UX or refuses toggles, the dev added a check we didn't cover yet — iterate on the bypass tweak source at bypass/Tweak.x.",
-          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-9/YouTubePlus_5.2.1_bypass_minimal.ipa",
-          "size": 128627599,
+          "date": "2026-05-23T21:50:00-04:00",
+          "localizedDescription": "Option 3 v2: minimal bypass.\n\n• YouTube 21.17.3 base + paid YTLite 5.2.1 (full 19MB binary) + 6 integrations + YTLite.bundle\n• YTLBypass v2 hooks ONLY DVNCell.setValidationHandler: (and the matching getter). v1's cosmetic hooks (setAccessoryIcon/setErrorText/accessoryImage) were removed — hypothesis is they were interfering with YTLite settings UI rendering causing the YouTube Plus entry to not appear.\n• Build: faisalga/YTLite Actions run #10 (ytp-10)\n\nIf YouTube Plus entry returns AND toggles persist: done.\nIf entry returns but toggles still locked: hook surface is wrong, need to intercept verifyAccessWithCompletion: itself.\nIf entry still missing: gate is upstream of validator (entry registration is paywall-gated separately) — need device syslog to find the actual surface.",
+          "downloadURL": "https://github.com/faisalga/YTLite/releases/download/ytp-10/YouTubePlus_5.2.1_bypass_v2_minimal.ipa",
+          "size": 128627485,
           "minOSVersion": "14.0"
         }
       ],
